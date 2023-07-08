@@ -49,6 +49,15 @@ export const ButtonStyled = css`
       width: 100%;
       display: block;
     `}
+    ${(props) =>
+    props.block &&
+    css`
+      background-color: transparent;
+      color: #5542f6;
+      border: 1px solid #5542f6;
+      width: 100%;
+      display: block;
+    `}
 `;
 const StyledButton = styled.button`
   ${ButtonStyled}

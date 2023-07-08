@@ -17,18 +17,24 @@ export default function ProductCard({
     // console.log(cartProducts);
   };
   //   console.log("hhhhhh", images);
+  const url = `product/${_id}`;
   return (
     <CardWrapper>
-      <WhiteBox href={"/"}>
+      <WhiteBox href={url}>
         <div>
           <img src={images?.[0]} alt="" />
         </div>
       </WhiteBox>
       <ProductInfoBox>
-        <Title href={"/"}>{title}</Title>
+        <Title href={url}>{title}</Title>
         <PriceRow>
           <Price>${price}</Price>
-          <Button primary="true" outline="true" onClick={addFeaturedToCart}>
+          <Button
+            block="true"
+            primary="true"
+            outline="true"
+            onClick={addFeaturedToCart}
+          >
             Add to cart
           </Button>
         </PriceRow>
@@ -72,7 +78,7 @@ const PriceRow = styled.div`
   display: block;
   @media screen and (min-width: 768px) {
     display: flex;
-    gap: 5px;
+    gap: 15px;
   }
   align-items: center;
   justify-content: space-between;
@@ -80,12 +86,13 @@ const PriceRow = styled.div`
 `;
 
 const Price = styled.div`
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: right;
-  @media screen and (min-width: 768px) {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
   }
 `;

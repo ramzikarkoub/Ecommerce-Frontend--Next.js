@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import Product from "@/models/product";
 import { connectToDB } from "@/utils/database";
 import NewProducts from "@/components/NewProducts";
-import { CartContext } from "@/components/CartContext";
 
 export default function HomePage({ featuredProduct, newProducts }) {
   console.log(newProducts);

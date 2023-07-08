@@ -51,17 +51,30 @@ const FeaturedStyled = styled.div`
   background-color: #222;
   display: flex;
   padding: 50px 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
   img {
     max-width: 100%;
     max-height: 200px;
     display: block;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      margin: -40px 0 20px 0;
+    }
   }
 `;
 const TitleDesc = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 20px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const Title = styled.h1`
   margin: 0;

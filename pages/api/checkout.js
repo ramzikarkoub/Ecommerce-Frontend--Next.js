@@ -15,6 +15,7 @@ export default async function handler(req, res) {
     postalCode,
     streetAddress,
     country,
+    phoneNumber,
     cartProducts,
   } = req.body;
   console.log(req.body);
@@ -52,6 +53,7 @@ export default async function handler(req, res) {
     postalCode,
     streetAddress,
     country,
+    phoneNumber,
     paid: false,
   });
 

@@ -4,12 +4,16 @@ import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import Button from "@/components/button";
+import Title from "@/components/Title";
+import Center from "@/components/Center";
+import WhiteBox from "@/components/WhiteBox";
 
 export default function cart() {
   const { cartProducts, addToCart, removeFromCart, clearCart } =
     useContext(CartContext);
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [postalCode, setPostalCode] = useState("");
@@ -27,6 +31,7 @@ export default function cart() {
       postalCode,
       streetAddress,
       country,
+      phoneNumber,
       cartProducts,
     });
 
@@ -94,10 +99,10 @@ export default function cart() {
       <div>
         <Header />
 
-        <StyledDiv>
+        <Center>
           <ColumnsWrapper>
-            <Box>
-              <h2>Cart</h2>
+            <WhiteBox>
+              <Title>Cart</Title>
               {!cartProducts?.length && <div>Your cart is empty</div>}
               {!!products.length && (
                 <Table>
@@ -156,9 +161,9 @@ export default function cart() {
                   </tbody>
                 </Table>
               )}
-            </Box>
+            </WhiteBox>
             {!!cartProducts?.length && (
-              <Box>
+              <WhiteBox>
                 <h2>Order information</h2>
                 <Input
                   type="text"
@@ -204,23 +209,25 @@ export default function cart() {
                   name="country"
                   onChange={(ev) => setCountry(ev.target.value)}
                 />
+                <Input
+                  type="text"
+                  placeholder="phoneNumber"
+                  value={phoneNumber}
+                  name="phoneNumber"
+                  onChange={(ev) => setPhoneNumber(ev.target.value)}
+                />
                 <Button black="true" block="true" onClick={goToPayment}>
                   Continue to payment
                 </Button>
-              </Box>
+              </WhiteBox>
             )}
           </ColumnsWrapper>
-        </StyledDiv>
+        </Center>
       </div>
     );
   }
 }
 
-const StyledDiv = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
 const ColumnsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -238,11 +245,11 @@ const ColumnsWrapperSuccess = styled.div`
   gap: 40px;
   margin-top: 40px;
 `;
-const Box = styled.div`
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 30px;
-`;
+// const Box = styled.div`
+//   background-color: #fff;
+//   border-radius: 10px;
+//   padding: 30px;
+// `;
 const ProductInfoCell = styled.td`
   padding: 10px 0;
 `;
