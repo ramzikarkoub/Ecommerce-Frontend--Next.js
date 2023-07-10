@@ -18,11 +18,11 @@ export default async function handler(req, res) {
     phoneNumber,
     cartProducts,
   } = req.body;
-  console.log(req.body);
+
   await connectToDB();
   const productsIds = cartProducts;
   const uniqueIds = [...new Set(productsIds)];
-  console.log("uniqueIds", uniqueIds);
+
   const productsInfos = await Product.find({ _id: uniqueIds });
 
   let line_items = [];
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       (p) => p._id.toString() === productId
     );
     const quantity = productsIds.filter((id) => id === productId)?.length || 0;
-    console.log(quantity);
+
     if (quantity > 0 && productInfo) {
       line_items.push({
         quantity,

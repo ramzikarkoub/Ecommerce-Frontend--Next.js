@@ -84,14 +84,15 @@ export default function cart() {
       return (
         <>
           <Header />
-          <StyledDiv>
+
+          <Center>
             <ColumnsWrapperSuccess>
               <Box>
                 <h1>Thanks for your order!</h1>
                 <p>We will email you when your order will be sent.</p>
               </Box>
             </ColumnsWrapperSuccess>
-          </StyledDiv>
+          </Center>
         </>
       );
     }
@@ -245,11 +246,11 @@ const ColumnsWrapperSuccess = styled.div`
   gap: 40px;
   margin-top: 40px;
 `;
-// const Box = styled.div`
-//   background-color: #fff;
-//   border-radius: 10px;
-//   padding: 30px;
-// `;
+const Box = styled.div`
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+`;
 const ProductInfoCell = styled.td`
   padding: 10px 0;
 `;
