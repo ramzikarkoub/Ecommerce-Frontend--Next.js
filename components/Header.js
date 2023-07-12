@@ -83,7 +83,7 @@ const ContainerInput = styled.form`
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: absolute;
