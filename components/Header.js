@@ -31,18 +31,13 @@ export default function Header() {
     } catch (error) {
       console.log("Failed to search for product", error);
     }
-    const viewportMeta = document.querySelector("meta[name=viewport]");
-    viewportMeta.setAttribute(
-      "content",
-      "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-    );
   }
   return (
     <StyledHeader>
       <Head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
       </Head>
       <Logo href={"/"}>Ecommerce</Logo>
