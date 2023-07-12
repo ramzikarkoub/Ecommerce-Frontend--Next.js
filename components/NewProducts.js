@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Center from "@/components/Center";
 
 export default function NewProducts(products) {
-  console.log(products);
   return (
     <Center>
       <Title>New Arrivals</Title>

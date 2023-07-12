@@ -9,9 +9,7 @@ export default function Featured({ product }) {
 
   const addFeaturedToCart = () => {
     addToCart(product._id);
-    console.log(cartProducts);
   };
-  console.log(cartProducts);
 
   return (
     <FeaturedStyled>

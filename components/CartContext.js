@@ -4,6 +4,8 @@ export const CartContext = createContext({});
 export default function CartContextProvider({ children }) {
   const ls = typeof window !== "undefined" ? window.localStorage : null;
   const [cartProducts, setCartProducts] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [searchResult, setsearchResult] = useState("");
   useEffect(() => {
     if (cartProducts?.length > 0) {
       ls?.setItem("cart", JSON.stringify(cartProducts));
@@ -49,6 +51,10 @@ export default function CartContextProvider({ children }) {
         addToCart,
         removeFromCart,
         clearCart,
+        searchResult,
+        setsearchResult,
+        searchKeyword,
+        setSearchKeyword,
       }}
     >
       {children}

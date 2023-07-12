@@ -3,7 +3,6 @@ import ProductCard from "./ProductCard";
 import styled from "styled-components";
 
 export default function ProductGrid({ products }) {
-  console.log("rrrr", products);
   return (
     <GridDiv>
       {products?.map((product) => (
@@ -18,7 +17,7 @@ const GridDiv = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
     grid-template-columns: 1fr 1fr;
   }
 `;

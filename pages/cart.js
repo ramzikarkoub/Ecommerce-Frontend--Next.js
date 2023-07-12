@@ -21,8 +21,6 @@ export default function cart() {
   const [country, setCountry] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
-  console.log(name);
-
   const goToPayment = async () => {
     const response = await axios.post("/api/checkout", {
       name,
@@ -58,27 +56,20 @@ export default function cart() {
 
   const addMoreOfthisProduct = (id) => {
     addToCart(id);
-    console.log(cartProducts);
   };
   const removeMoreOfThisProduct = (id) => {
     removeFromCart(id);
-    console.log(cartProducts);
-    console.log(id);
   };
 
   useEffect(() => {
     if (cartProducts.length > 0) {
       axios.post("/api/cart", { ids: cartProducts }).then((response) => {
         setProducts(response.data);
-        console.log(products);
       });
     } else {
       setProducts([]);
-      console.log(products);
     }
   }, [cartProducts]);
-  console.log(products);
-  console.log(cartProducts);
   {
     if (isSuccess) {
       return (

@@ -6,10 +6,6 @@ import { connectToDB } from "@/utils/database";
 import NewProducts from "@/components/NewProducts";
 
 export default function HomePage({ featuredProduct, newProducts }) {
-  console.log(newProducts);
-  // const lastElement = newProduct.slice(-1);
-  // console.log(lastElement);
-
   return (
     <div>
       <Header />

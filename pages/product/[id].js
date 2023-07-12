@@ -47,11 +47,17 @@ const ColWrapper = styled.div`
   grid-template-columns: 0.8fr 1.2fr;
   gap: 40px;
   margin-top: 40px;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 const PriceRow = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: end;
+  }
 `;
 const Price = styled.span`
   font-size: 1.4rem;
