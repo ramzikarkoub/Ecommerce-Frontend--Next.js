@@ -41,7 +41,7 @@ export default function Header() {
         />
       </Head>
       <Logo href={"/"}>Ecommerce</Logo>
-      <StyledNav menuOpen={menuOpen} onClick={toggleMenu}>
+      <StyledNav menuopen={menuOpen} onClick={toggleMenu}>
         <StyledLink href={"/"}>Home</StyledLink>
         <StyledLink href={"/products"}>All products</StyledLink>
         <StyledLink href={"/categories"}>Categories</StyledLink>
@@ -83,7 +83,7 @@ const ContainerInput = styled.form`
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px 18px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -141,7 +141,19 @@ const Logo = styled(Link)`
     font-size: 17px;
   }
 `;
-const StyledNav = styled.nav`
+
+const StyledLink = styled(Link)`
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  @media only screen and (max-width: 900px) and (min-width: 769px) {
+    padding: 20px 5px;
+  }
+`;
+
+const StyledNav = styled.nav.attrs((props) => ({
+  menuopen: props.menuopen.toString(),
+}))`
   display: flex;
   gap: 15px;
   padding: 0 20px 0 20px;
@@ -160,7 +172,7 @@ const StyledNav = styled.nav`
     height: 100vh;
     width: 100vw;
     ${(props) =>
-      props.menuOpen
+      props.menuopen === "true"
         ? `
           opacity: 1;
           visibility: visible;
@@ -171,13 +183,5 @@ const StyledNav = styled.nav`
         `}
 
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  }
-`;
-const StyledLink = styled(Link)`
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
-  @media only screen and (max-width: 900px) and (min-width: 769px) {
-    padding: 20px 5px;
   }
 `;
