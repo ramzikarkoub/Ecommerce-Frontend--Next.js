@@ -5,6 +5,7 @@ import { CartContext } from "./CartContext";
 import CloseMenuIcon from "./CloseMenuIcon";
 import MenuIcons from "./MenuIcons";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Header() {
   const { cartProducts } = useContext(CartContext);
@@ -19,7 +20,6 @@ export default function Header() {
   }
   async function search(e) {
     e.preventDefault();
-    // if (searchKeyword.trim() === "") return;
 
     try {
       const response = await fetch(`/api/search/${searchKeyword}`);
@@ -31,9 +31,20 @@ export default function Header() {
     } catch (error) {
       console.log("Failed to search for product", error);
     }
+    const viewportMeta = document.querySelector("meta[name=viewport]");
+    viewportMeta.setAttribute(
+      "content",
+      "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    );
   }
   return (
     <StyledHeader>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+      </Head>
       <Logo href={"/"}>Ecommerce</Logo>
       <StyledNav menuOpen={menuOpen} onClick={toggleMenu}>
         <StyledLink href={"/"}>Home</StyledLink>
