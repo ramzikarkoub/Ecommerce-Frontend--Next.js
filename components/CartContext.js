@@ -40,9 +40,7 @@ export default function CartContextProvider({ children }) {
 
   const clearCart = () => {
     ls.clear();
-    console.log(cartProducts);
   };
-  console.log(cartProducts);
   return (
     <CartContext.Provider
       value={{

@@ -12,7 +12,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { searchKeyword, setSearchKeyword, searchResult, setsearchResult } =
     useContext(CartContext);
-  console.log(searchResult);
   const router = useRouter();
 
   function toggleMenu() {
