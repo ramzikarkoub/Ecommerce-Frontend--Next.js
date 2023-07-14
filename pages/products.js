@@ -30,20 +30,22 @@ export default function ProductsPage({ products }) {
       <Header />
 
       <Center>
-        <Title>All products</Title>
-        <div>
-          <div>Sort by</div>
-          <select
-            name=""
-            id=""
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-          >
-            <option value="newest">Newest Arrivals</option>
-            <option value="lowToHigh">Price: Low to High</option>
-            <option value="highToLow">Price: High to Low</option>
-          </select>
-        </div>
+        <TitleSortByWrap>
+          <Title>All products</Title>
+          <SortBy>
+            <SortByTitle>Sort by</SortByTitle>
+            <SelectSortBy
+              name=""
+              id=""
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <option value="newest">Newest Arrivals</option>
+              <option value="lowToHigh">Price: Low to High</option>
+              <option value="highToLow">Price: High to Low</option>
+            </SelectSortBy>
+          </SortBy>
+        </TitleSortByWrap>
         <ProductsGrid products={sortedProducts} />
       </Center>
     </>
@@ -60,3 +62,26 @@ export async function getServerSideProps() {
     },
   };
 }
+
+const TitleSortByWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+`;
+
+const SortBy = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  /* background-color: red; */
+  justify-content: center;
+`;
+const SortByTitle = styled.h4`
+  margin-right: 5px;
+`;
+const SelectSortBy = styled.select`
+  padding-left: 5px;
+  border-radius: 5px;
+  height: 25px;
+`;
