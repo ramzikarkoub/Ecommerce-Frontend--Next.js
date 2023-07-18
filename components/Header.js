@@ -173,6 +173,7 @@ const StyledNav = styled.nav.attrs((props) => ({
     align-items: center;
     height: 100vh;
     width: 100vw;
+    z-index: 3;
     ${(props) =>
       props.menuopen === "true"
         ? `
