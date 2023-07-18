@@ -16,7 +16,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
 }
 
 export async function getStaticProps() {
-  const featuredProductId = "649275266eb75cfc01efecf6";
+  const featuredProductId = "64b471e16f4b2461a3415088";
   await connectToDB();
   const featuredProduct = await Product.findById(featuredProductId);
   const newProducts = await Product.find({}, null, {

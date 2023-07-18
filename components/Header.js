@@ -43,8 +43,11 @@ export default function Header() {
       <StyledNav menuopen={menuOpen} onClick={toggleMenu}>
         <StyledLink href={"/"}>Home</StyledLink>
         <StyledLink href={"/products"}>All products</StyledLink>
-        <StyledLink href={"/categories"}>Categories</StyledLink>
-        <StyledLink href={"/account"}>Account</StyledLink>
+        <StyledLink href={"/product/64b471e16f4b2461a3415088"}>
+          Drum lessons
+        </StyledLink>
+        <StyledLink href={"/about"}>About</StyledLink>
+        <StyledLink href={"/contact"}>Contact</StyledLink>
         <StyledLink href={"/cart"}>Cart ({cartProducts.length})</StyledLink>
       </StyledNav>
       <ContainerInput onSubmit={search}>

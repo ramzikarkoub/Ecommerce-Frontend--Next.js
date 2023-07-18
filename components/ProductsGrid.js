@@ -6,7 +6,7 @@ export default function ProductGrid({ products }) {
   return (
     <GridDiv>
       {products?.map((product) => (
-        <ProductCard key={product._id} {...product} />
+        <ProductCard key={product._id} product={product} />
       ))}
     </GridDiv>
   );

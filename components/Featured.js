@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import Button from "./button";
@@ -6,9 +7,9 @@ import { CartContext } from "./CartContext";
 
 export default function Featured({ product }) {
   const { cartProducts, addToCart } = useContext(CartContext);
-
+  const router = useRouter();
   const addFeaturedToCart = () => {
-    addToCart(product._id);
+    addToCart(product);
   };
 
   return (
@@ -17,10 +18,10 @@ export default function Featured({ product }) {
         <Title>{product.title}</Title>
         <Desc>{product.description}</Desc>
         <ButtonsWrapper>
-          <ButtonLink outline="true" white="true" href={"/"}>
-            Read more
-          </ButtonLink>
-          <Button primary="true" onClick={addFeaturedToCart}>
+          <Button
+            primary="true"
+            onClick={() => router.push("/product/" + product._id)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,12 +36,19 @@ export default function Featured({ product }) {
                 d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
               />
             </svg>
-            Add to cart
+            Book the first lesson FREE!!!
           </Button>
+          <ButtonLink
+            outline="true"
+            white="true"
+            href={"/product/" + product._id}
+          >
+            Read more...
+          </ButtonLink>
         </ButtonsWrapper>
       </TitleDesc>
 
-      <img src={product.images[4]} alt="" width={200} />
+      <img src={product.images[0]} alt="" width={200} />
     </FeaturedStyled>
   );
 }
@@ -60,6 +68,8 @@ const FeaturedStyled = styled.div`
     max-height: 200px;
     display: block;
     margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 5px;
     @media screen and (max-width: 768px) {
       margin: -40px 0 20px 0;
     }
