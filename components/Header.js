@@ -13,7 +13,7 @@ export default function Header() {
   const { searchKeyword, setSearchKeyword, searchResult, setsearchResult } =
     useContext(CartContext);
   const router = useRouter();
-
+  console.log(cartProducts);
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
   }
@@ -48,7 +48,7 @@ export default function Header() {
         </StyledLink>
         <StyledLink href={"/about"}>About</StyledLink>
         <StyledLink href={"/contact"}>Contact</StyledLink>
-        <StyledLink href={"/cart"}>Cart ({cartProducts.length})</StyledLink>
+        <StyledLink href={"/cart"}>Cart ({cartProducts?.length})</StyledLink>
       </StyledNav>
       <ContainerInput onSubmit={search}>
         <input
@@ -77,7 +77,6 @@ const ContainerInput = styled.form`
     border: none;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* position: absolute; */
   }
 
   button {

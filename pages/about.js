@@ -7,7 +7,6 @@ import styled from "styled-components";
 export default function about() {
   return (
     <div>
-      <Header />
       <Center>
         <GalleryContainer>
           <Gallery images={images} />

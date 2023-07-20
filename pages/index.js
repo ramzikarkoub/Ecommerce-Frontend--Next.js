@@ -1,6 +1,5 @@
 import Featured from "../components/Featured";
-import Header from "../components/Header";
-import React, { useContext } from "react";
+import React from "react";
 import Product from "@/models/product";
 import { connectToDB } from "@/utils/database";
 import NewProducts from "@/components/NewProducts";
@@ -8,7 +7,6 @@ import NewProducts from "@/components/NewProducts";
 export default function HomePage({ featuredProduct, newProducts }) {
   return (
     <div>
-      <Header />
       <Featured product={featuredProduct} />
       <NewProducts products={newProducts} />
     </div>

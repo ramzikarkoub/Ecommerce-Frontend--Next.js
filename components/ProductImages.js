@@ -4,7 +4,6 @@ import { useState } from "react";
 const Image = styled.img`
   max-width: 100%;
   max-height: 100%;
-  /* object-fit: contain; */
 `;
 const BigImage = styled.img`
   max-width: 100%;
@@ -43,7 +42,6 @@ const BigImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   height: 200px;
 `;
 

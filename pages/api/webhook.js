@@ -9,7 +9,6 @@ const endpointSecret =
 export default async function handler(req, res) {
   await connectToDB;
   const sig = req.headers["stripe-signature"];
-  console.log("siiiiiiiiiiiiiiiiiid", sig);
   let event;
 
   try {
@@ -18,7 +17,6 @@ export default async function handler(req, res) {
       sig,
       endpointSecret
     );
-    console.log("eeeveeeeeeeeeeeeeeeeeeeeent", event);
   } catch (err) {
     console.log(err);
     res.status(400).send(`Webhook Error: ${err.message}`);
@@ -31,7 +29,6 @@ export default async function handler(req, res) {
       const data = event.data.object;
       const orderId = data.metadata.orderId;
       const paid = data.payment_status === "paid";
-      console.log("hahahahhahahahhahahahhahahahha", paid);
       if (orderId && paid) {
         await Order.findByIdAndUpdate(orderId, {
           paid: true,
@@ -48,6 +45,3 @@ export default async function handler(req, res) {
 export const config = {
   api: { bodyParser: false },
 };
-
-//easy-worthy-handy-flashy
-// account id acct_1NONuuKHddlM4nB3

@@ -14,7 +14,6 @@ export default function contact() {
 
   return (
     <div>
-      <Header />
       <Center>
         <WhiteBo>
           <h2>Let's talk</h2>
