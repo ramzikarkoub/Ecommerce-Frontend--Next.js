@@ -20,6 +20,7 @@ export default async function handler(req, res) {
     );
     console.log("eeeveeeeeeeeeeeeeeeeeeeeent", event);
   } catch (err) {
+    console.log(err);
     res.status(400).send(`Webhook Error: ${err.message}`);
     return;
   }
@@ -30,6 +31,7 @@ export default async function handler(req, res) {
       const data = event.data.object;
       const orderId = data.metadata.orderId;
       const paid = data.payment_status === "paid";
+      console.log("hahahahhahahahhahahahhahahahha", paid);
       if (orderId && paid) {
         await Order.findByIdAndUpdate(orderId, {
           paid: true,

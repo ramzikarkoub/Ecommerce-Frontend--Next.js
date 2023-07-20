@@ -14,18 +14,21 @@ export default function about() {
         </GalleryContainer>
         <TextContainer>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
-            aliquid earum eius unde, harum ad, ratione similique enim ab ipsa
-            esse ullam architecto pariatur illum porro nisi magni molestiae
-            itaque quibusdam atque. Facere laborum, temporibus magni
-            voluptatibus quis sint enim consequuntur dicta inventore, quasi,
-            dolorem corporis. Corporis assumenda delectus labore consequatur
-            repellat unde qui nihil accusamus eaque minus voluptate dolore,
-            tempore voluptatum voluptatem laborum architecto nam optio, alias
-            ipsum hic at maiores. Itaque quaerat ipsa eveniet minima eum nisi
-            eligendi cupiditate provident natus quos quasi repudiandae
-            voluptatem aliquid quod fugit mollitia alias similique quam,
-            necessitatibus in excepturi sed, minus tenetur.
+            Welcome to [Drummer's Name] official website! With a rhythm that
+            moves souls and beats that ignite passion, [Drummer's Name] is an
+            exceptional talent behind the kit. With a deep-rooted love for
+            percussion and an insatiable drive for musical excellence,
+            [Drummer's Name] brings an unparalleled energy and skill to every
+            performance. With a career spanning [number of years] years,
+            [Drummer's Name] has collaborated with renowned artists across
+            various genres, leaving an indelible mark on the music industry.
+            From explosive rock beats to grooving jazz rhythms, [Drummer's Name]
+            effortlessly weaves together a tapestry of sounds, captivating
+            audiences worldwide. Explore this site to discover [Drummer's
+            Name]'s discography, upcoming shows, and insights into their
+            creative process. Prepare to be mesmerized by the pulsating
+            heartbeat of music as [Drummer's Name] takes you on an unforgettable
+            rhythmic journey.
           </p>
         </TextContainer>
       </Center>
@@ -35,54 +38,63 @@ export default function about() {
 
 const images = [
   {
-    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-    original: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-    width: 920,
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695170/pexels-cottonbro-studio-5648527_enfd0x.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695170/pexels-cottonbro-studio-5648527_enfd0x.jpg",
+    width: 420,
     height: 512,
     caption: "Boats (Jeshu John - designerspics.com)",
   },
+
   {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    original: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    width: 620,
-    height: 312,
-    caption: "Color Pencils (Jeshu John - designerspics.com)",
-  },
-  {
-    src: "https://c7.staticflickr.com/9/8546/28354329294_bb45ba31fa_b.jpg",
-    original: "https://c7.staticflickr.com/9/8546/28354329294_bb45ba31fa_b.jpg",
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695168/pexels-josh-sorenson-995301_vsolwo.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695168/pexels-josh-sorenson-995301_vsolwo.jpg",
     width: 520,
     height: 313,
     caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
   },
   {
-    src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
-    original: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695168/pexels-cottonbro-studio-5650909_oqjawg.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695168/pexels-cottonbro-studio-5650909_oqjawg.jpg",
     width: 520,
     height: 283,
     caption: "37H (gratispgraphy.com)",
   },
   {
-    src: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
-    original: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
-    width: 440,
-    height: 520,
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695657/pexels-tima-miroshnichenko-5045881_crnaj5.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695657/pexels-tima-miroshnichenko-5045881_crnaj5.jpg",
+    width: 400,
+    height: 220,
   },
   {
-    src: "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg",
-    original: "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg",
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695160/pexels-ricardo-rojas-3608804_obcetr.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695160/pexels-ricardo-rojas-3608804_obcetr.jpg",
     width: 320,
     height: 190,
   },
   {
-    src: "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg",
-    original: "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg",
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695170/pexels-matthew-baur-2614942_j4wjnb.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695170/pexels-matthew-baur-2614942_j4wjnb.jpg",
+    width: 220,
+    height: 312,
+    caption: "Color Pencils (Jeshu John - designerspics.com)",
+  },
+  {
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695651/pexels-artem-podrez-6270151_hgrqsw.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695651/pexels-artem-podrez-6270151_hgrqsw.jpg",
     width: 320,
     height: 148,
   },
   {
-    src: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
-    original: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
+    src: "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695650/pexels-antoni-shkraba-production-8044195_k4i7wg.jpg",
+    original:
+      "https://res.cloudinary.com/dkyzsx1az/image/upload/v1689695650/pexels-antoni-shkraba-production-8044195_k4i7wg.jpg",
     width: 320,
     height: 213,
   },

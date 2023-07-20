@@ -39,11 +39,11 @@ export default function Header() {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
       </Head>
-      <Logo href={"/"}>Ecommerce</Logo>
+      <Logo href={"/"}>Logo</Logo>
       <StyledNav menuopen={menuOpen} onClick={toggleMenu}>
         <StyledLink href={"/"}>Home</StyledLink>
         <StyledLink href={"/products"}>All products</StyledLink>
-        <StyledLink href={"/product/64b471e16f4b2461a3415088"}>
+        <StyledLink href={"/product/64b6bdb4a69123250490b2d6"}>
           Drum lessons
         </StyledLink>
         <StyledLink href={"/about"}>About</StyledLink>

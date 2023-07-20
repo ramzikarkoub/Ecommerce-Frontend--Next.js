@@ -16,6 +16,8 @@ const ImageButtons = styled.div`
   gap: 10px;
   flex-grow: 0;
   margin-top: 40px;
+  justify-content: center;
+  align-items: center;
 `;
 const ImageButton = styled.div`
   border: 2px solid #ccc;
@@ -33,6 +35,9 @@ const ImageButton = styled.div`
   padding: 2px;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const BigImageWrapper = styled.div`
   display: flex;
@@ -53,7 +58,7 @@ export default function ProductImages({ images }) {
         {images.map((image) => (
           <ImageButton
             key={image}
-            active={(image === activeImage).toString()}
+            active={image === activeImage}
             onClick={() => setActiveImage(image)}
           >
             <Image src={image} alt="" />
