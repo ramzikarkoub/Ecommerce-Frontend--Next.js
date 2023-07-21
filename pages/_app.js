@@ -2,6 +2,7 @@ import CartContextProvider from "@/components/CartContext";
 import GlobalStyle from "@/styles/GlobalStyle";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Layout from "./Layout";
+import NextNProgress from "nextjs-progressbar";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
         <GlobalStyle />
         <CartContextProvider>
           <Layout>
+            <NextNProgress />
             <Component {...pageProps} />
           </Layout>
         </CartContextProvider>

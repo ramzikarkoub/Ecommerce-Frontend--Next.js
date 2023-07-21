@@ -71,8 +71,9 @@ const SortBy = styled.div`
   padding: 5px;
   justify-content: center;
 `;
-const SortByTitle = styled.h4`
+const SortByTitle = styled.h5`
   margin-right: 5px;
+  /* font-size: 1em; */
 `;
 const SelectSortBy = styled.select`
   padding-left: 5px;

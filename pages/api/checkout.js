@@ -57,10 +57,11 @@ export default async function handler(req, res) {
   );
   console.log("gfreger", items.properties);
 
-  console.log("line_itemsline_itemsline_itemsline_itemsline_items", items);
+  const cartTotal = cartProducts.reduce((acc, cur) => acc + cur.price, 0);
 
   const orderDoc = await Order.create({
     items,
+    cartTotal,
     name,
     email,
     city,

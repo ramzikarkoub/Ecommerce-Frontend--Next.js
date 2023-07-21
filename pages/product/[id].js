@@ -52,7 +52,7 @@ export default function ProductPage({ product, category }) {
                     <PropertyItem key={i}>
                       <PropertyName>{pro.name}</PropertyName>
                       <PropertyValue
-                        defaultValue={product.properties[pro.value]}
+                        defaultValue={product.properties[pro.name]}
                         onChange={(e) => {
                           const selectedProperty = {
                             name: pro.name,
@@ -132,14 +132,17 @@ const PropertyItem = styled.li`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
+  /* width: 100%; */
 `;
 const PropertyName = styled.span`
   margin-right: 5px;
+  /* width: 100%; */
 `;
 const PropertyValue = styled.select`
   width: 60px;
   border-radius: 5px;
   height: 20px;
+  width: 100px;
 `;
 
 export async function getServerSideProps(context) {
