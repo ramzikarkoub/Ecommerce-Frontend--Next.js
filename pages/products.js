@@ -5,7 +5,7 @@ import styled from "styled-components";
 import ProductsGrid from "@/components/ProductsGrid";
 import Title from "@/components/Title";
 import Center from "@/components/Center";
-
+import Head from "next/head";
 export default function ProductsPage({ products }) {
   const [sortBy, setSortBy] = useState("");
   const [sortedProducts, setSortedProducts] = useState([]);
@@ -25,25 +25,31 @@ export default function ProductsPage({ products }) {
 
   console.log(sortBy);
   return (
-    <Center>
-      <TitleSortByWrap>
-        <Title>All products</Title>
-        <SortBy>
-          <SortByTitle>Sort by</SortByTitle>
-          <SelectSortBy
-            name=""
-            id=""
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-          >
-            <option value="newest">Newest Arrivals</option>
-            <option value="lowToHigh">Price: Low to High</option>
-            <option value="highToLow">Price: High to Low</option>
-          </SelectSortBy>
-        </SortBy>
-      </TitleSortByWrap>
-      <ProductsGrid products={sortedProducts} />
-    </Center>
+    <>
+      <Head>
+        <title>All products</title>
+        <meta name="description" content="description for page product" />
+      </Head>
+      <Center>
+        <TitleSortByWrap>
+          <Title>All products</Title>
+          <SortBy>
+            <SortByTitle>Sort by</SortByTitle>
+            <SelectSortBy
+              name=""
+              id=""
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <option value="newest">Newest Arrivals</option>
+              <option value="lowToHigh">Price: Low to High</option>
+              <option value="highToLow">Price: High to Low</option>
+            </SelectSortBy>
+          </SortBy>
+        </TitleSortByWrap>
+        <ProductsGrid products={sortedProducts} />
+      </Center>
+    </>
   );
 }
 

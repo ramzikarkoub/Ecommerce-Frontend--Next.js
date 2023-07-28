@@ -3,10 +3,32 @@ import Header from "@/components/Header";
 import { useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import styled from "styled-components";
+import Head from "next/head";
 
 export default function about() {
   return (
     <div>
+      <Head>
+        <title>Ramzi karkoub</title>
+        <meta
+          name="description"
+          content="Welcome to [Drummer's Name] official website! With a rhythm that
+            moves souls and beats that ignite passion, [Drummer's Name] is an
+            exceptional talent behind the kit. With a deep-rooted love for
+            percussion and an insatiable drive for musical excellence,
+            [Drummer's Name] brings an unparalleled energy and skill to every
+            performance. With a career spanning [number of years] years,
+            [Drummer's Name] has collaborated with renowned artists across
+            various genres, leaving an indelible mark on the music industry.
+            From explosive rock beats to grooving jazz rhythms, [Drummer's Name]
+            effortlessly weaves together a tapestry of sounds, captivating
+            audiences worldwide. Explore this site to discover [Drummer's
+            Name]'s discography, upcoming shows, and insights into their
+            creative process. Prepare to be mesmerized by the pulsating
+            heartbeat of music as [Drummer's Name] takes you on an unforgettable
+            rhythmic journey."
+        />
+      </Head>
       <Center>
         <GalleryContainer>
           <Gallery images={images} />

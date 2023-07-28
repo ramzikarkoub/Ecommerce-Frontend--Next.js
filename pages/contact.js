@@ -4,6 +4,7 @@ import Button from "@/components/button";
 import Center from "@/components/Center";
 import styled from "styled-components";
 import Swal from "sweetalert2";
+import Head from "next/head";
 
 export default function contact() {
   const [name, setName] = useState("");
@@ -47,6 +48,10 @@ export default function contact() {
 
   return (
     <div>
+      <Head>
+        <title>Contact</title>
+        <meta name="description" content="contact us" />
+      </Head>
       <Center>
         <WhiteBo>
           <h2>Let's talk</h2>

@@ -8,6 +8,7 @@ import Center from "@/components/Center";
 import WhiteBox from "@/components/WhiteBox";
 import Input from "@/components/Input";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function cart() {
   const { cartProducts, addToCart, removeFromCart, clearCart } =
@@ -90,6 +91,11 @@ export default function cart() {
     }
     return (
       <div>
+        <Head>
+          <title>Cart</title>
+          <meta name="description" content="Cart" />
+        </Head>
+
         <Center>
           <ColumnsWrapper>
             <WhiteBox>

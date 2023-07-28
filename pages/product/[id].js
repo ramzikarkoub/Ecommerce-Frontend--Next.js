@@ -9,6 +9,7 @@ import styled from "styled-components";
 import { CartContext } from "@/components/CartContext";
 import WhiteBox from "@/components/WhiteBox";
 import Button from "@/components/button";
+import Head from "next/head";
 
 export default function ProductPage({ product, category }) {
   const { addToCart } = useContext(CartContext);
@@ -34,9 +35,17 @@ export default function ProductPage({ product, category }) {
       properties: productProperties,
     });
   }, [productProperties]);
-
+  // const metadata = {
+  //   title: product.title,
+  //   description:
+  //     "Discover an extensive collection of high-quality drums, percussion instruments, and accessories for drummers of all skill levels. Whether you're a beginner or a seasoned pro, our wide range of products, including drum sets, cymbals, drumsticks, and more, will cater to your every need. Browse through our handpicked selection of top brands and find the perfect gear to enhance your rhythm and elevate your performance. Get ready to unleash your creativity and passion for music with [Your Drum Center Name]. Happy drumming!",
+  // };
   return (
     <>
+      <Head>
+        <title>{product.title}</title>
+        <meta name="description" content={product.description} />
+      </Head>
       <Center>
         <ColWrapper>
           <WhiteBox>
@@ -149,8 +158,6 @@ export async function getServerSideProps(context) {
   await connectToDB();
   const { id } = context.query;
   const product = await Product.findById(id);
-  const { hi } = context.query;
-  console.log(hi);
   const category = await Category.findById(product.category);
   return {
     props: {
