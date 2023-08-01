@@ -9,7 +9,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>Ramzis drum center</title>
         <meta
           name="description"
           content="Welcome!! we are here aspiring drummers embark on an exciting rhythmic journey. At [Drummer's Name]'s Drum center, we offer top-notch drum lessons tailored to unleash your inner percussionist. Whether you're a beginner eager to learn the fundamentals or an experienced drummer seeking to refine your technique, our lessons cater to all skill levels. We strive to understand your musical goals and design lessons that align with your aspirations. With a strong emphasis on hands-on practice, you'll explore various musical styles, rudiments, and drumming concepts. Our state-of-the-art studio is equipped with top-of-the-line drum kits and recording equipment, providing an immersive learning environment. Join us for an unparalleled drumming experience and let us guide you on the path to becoming versatile drummer"
