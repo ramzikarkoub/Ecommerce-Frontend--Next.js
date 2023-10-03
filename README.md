@@ -34,35 +34,5 @@ Global State Management: We've employed React Context for global state managemen
 
 Performance Optimization: Lazy loading techniques have been implemented to ensure swift loading, enhancing the overall performance of the website.
 
-Getting Started
-To explore our Drum Center E-commerce Website or contribute to its development, follow these steps:
-
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/drum-center-ecommerce.git
-Navigate to the project directory:
-
-bash
-Copy code
-cd drum-center-ecommerce
-Install dependencies:
-
-bash
-Copy code
-npm install
-Start the development server:
-
-bash
-Copy code
-npm run dev
-Open your web browser and visit http://localhost:3000 to view the website locally.
-
-Contributing
-We welcome contributions from the open-source community! Whether you'd like to report a bug, suggest an improvement, or contribute code, please check our Contributing Guidelines for more details.
-
-License
-This project is licensed under the MIT License.
 
 Thank you for exploring our Drum Center E-commerce Website repository. We invite you to dive into the world of percussion, shop for your favorite drumming products, and enjoy a seamless online shopping experience.
